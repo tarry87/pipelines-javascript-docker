@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: tarrypipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tarrypipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: tarrypipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: tarrypipelinesjavascriptdocker 
+          image: containerregistry084.azurecr.io/tarrypipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
